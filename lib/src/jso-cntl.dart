@@ -3,7 +3,7 @@ part of controller;
 class JsoCntl {
   void parse(String jso) {
     jsoModel.jso = json.parse(jso);
-    urls.router.gotoUrl(urls.searchUrl, [null], "");
+    appModel.currentView = ViewEnum.SEARCH;
   }
 
   bool matcheSearchFilter(String title, var value) {

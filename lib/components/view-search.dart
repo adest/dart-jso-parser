@@ -2,7 +2,6 @@ library x_view_search;
 
 import 'dart:html';
 import 'package:web_ui/web_ui.dart';
-import 'package:jsoparser/urls.dart';
 import 'package:jsoparser/model.dart';
 
 class ViewSearch extends WebComponent {
@@ -16,6 +15,6 @@ class ViewSearch extends WebComponent {
   }
 
   handleBack() {
-    router.gotoPath(homeUrl.reverse([], useFragment: true), "");
+    appModel.currentView = ViewEnum.INPUT;
   }
 }

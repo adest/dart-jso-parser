@@ -17,7 +17,14 @@
     </div>
   </nav>
 
-  <div view class="container"></div>
+  <div class="container">
+    <template if="appModel.currentView == ViewEnum.INPUT">
+      <x-view-input></x-view-input>
+    </template>
+    <template if="appModel.currentView == ViewEnum.SEARCH">
+      <x-view-search></x-view-search>
+    </template>
+  </div>
   <!-- <x-view-input class="container"></x-view-input>
   <x-view-search class="container"></x-view-search>-->
 
