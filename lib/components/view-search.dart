@@ -10,7 +10,7 @@ class ViewSearch extends WebComponent {
 
   inserted() {
     var root = shadowRoot != null? shadowRoot: this;
-    _search = root.query("header > section.search > form.form-search > input.search-query");
+    _search = root.query("header > section.search > input.search-query");
     _search.focus();
   }
 

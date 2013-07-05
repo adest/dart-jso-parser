@@ -8,15 +8,6 @@
 </head>
 <body>
 <element name="x-view-search" constructor="ViewSearch" extends="div" apply-author-styles="true">
-<style>
-  .hidden {
-    visibility: hidden;
-  }
-  section.content form > textarea {
-    width: 100%;
-    min-height: 300px;
-  }
-</style>
 <template>
   <section class="jso-search">
     <header>
@@ -32,10 +23,7 @@
         </template>
       </section>
       <section class="search">
-        <form class="form-search">
-          <input type="text" class="input-medium search-query" bind-value="jsoModel.searchFilter">
-          <button type="submit" class="btn">Search</button>
-        </form>
+        <input type="text" bind-value="jsoModel.searchFilter" placeholder="search" class="input-medium search-query" >
       </section>
     </header>
     <section class="content">

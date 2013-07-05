@@ -17,7 +17,7 @@ class ViewInput extends WebComponent {
   inserted() {
     var root = shadowRoot != null? shadowRoot: this;
     _enterInfo = root.query("section.content > h2");
-    _textarea = root.query("section.content > form > textarea");
+    _textarea = root.query("section.content > textarea");
     _textarea.text = stringify(jsoModel.jso);
     _handleTextareaValueChange();
     _textarea.focus();

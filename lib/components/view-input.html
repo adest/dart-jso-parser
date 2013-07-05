@@ -11,7 +11,7 @@
   .hidden {
     visibility: hidden;
   }
-  section.content form > textarea {
+  section.content > textarea {
     width: 100%;
     min-height: 300px;
   }
@@ -31,17 +31,15 @@
     </header>
     <section class="content">
       <h2 class="hidden"><small>Press enter when it's done!</small></h2>
-      <form>
-        <textarea id="jso-input"
-            placeholder="Type some jso here !"
-            on-cut="_handleTextareaValueChange()"
-            on-paste="_handleTextareaValueChange()"
-            on-key-up="_handleTextareaValueChange()"
-            on-key-down="_handleTextareaValueChange()"
-            on-change="_handleTextareaValueChange()"
-            on-key-press="_handleTextareaKeyPress($event)"
-            on-blur="_noBlurHandler()"></textarea>
-      </form>
+      <textarea id="jso-input"
+          placeholder="Type some jso here !"
+          on-cut="_handleTextareaValueChange()"
+          on-paste="_handleTextareaValueChange()"
+          on-key-up="_handleTextareaValueChange()"
+          on-key-down="_handleTextareaValueChange()"
+          on-change="_handleTextareaValueChange()"
+          on-key-press="_handleTextareaKeyPress($event)"
+          on-blur="_noBlurHandler()"></textarea>
     </section>
   </section>
 </template>
