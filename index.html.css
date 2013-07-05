@@ -2,6 +2,25 @@
 /* DO NOT EDIT. */
 
 /* ==================================================== 
+   Component jso-app stylesheet 
+   ==================================================== */
+body {
+  overflow: hidden;
+}
+.view {
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  top: 60px;
+  bottom: 105px;
+  left: 0;
+  right: 0;
+}
+footer.navbar-fixed-bottom {
+  height: 105px;
+}
+
+/* ==================================================== 
    Component x-view-input stylesheet 
    ==================================================== */
 .hidden {
@@ -13,21 +32,28 @@ section.content > textarea {
 }
 
 /* ==================================================== 
-   Component x-tree-item stylesheet 
+   Component x-view-search stylesheet 
    ==================================================== */
-li, li {
+section.content {
+  margin-top: 10px;
+}
+
+/* ==================================================== 
+   Component x-tree stylesheet 
+   ==================================================== */
+li {
   list-style-type: none;
 }
-li.opened > .title:before {
-  content: "+ ";
+li.parent:before {
+  content: "-";
 }
-li.closed > .title:before {
-  content: "- ";
+li.parent.open:before {
+  content: "+";
 }
-li > .title.is-leaf:before {
-  content: "";
-}
-li.closed > ul {
+li.parent > ul {
   display: none;
+}
+li.parent.open > ul {
+  display: block;
 }
 
