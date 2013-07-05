@@ -1,0 +1,44 @@
+/* Auto-generated from components style tags. */
+/* DO NOT EDIT. */
+
+/* ==================================================== 
+   Component x-view-input stylesheet 
+   ==================================================== */
+.hidden {
+  visibility: hidden;
+}
+section.content form > textarea {
+  width: 100%;
+  min-height: 300px;
+}
+
+/* ==================================================== 
+   Component x-view-search stylesheet 
+   ==================================================== */
+.hidden {
+  visibility: hidden;
+}
+section.content form > textarea {
+  width: 100%;
+  min-height: 300px;
+}
+
+/* ==================================================== 
+   Component x-tree-item stylesheet 
+   ==================================================== */
+li, li {
+  list-style-type: none;
+}
+li.opened > .title:before {
+  content: "+ ";
+}
+li.closed > .title:before {
+  content: "- ";
+}
+li > .title.is-leaf:before {
+  content: "";
+}
+li.closed > ul {
+  display: none;
+}
+
