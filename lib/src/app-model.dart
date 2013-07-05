@@ -19,7 +19,7 @@ class JsoModel {
   @observable String searchFilter = '';
 
   JsoModel() {
-    jso = parse('{"toto":{"titi":5}, "tutu":[0,1,2,3,4,5,6,7,8,9]}');
+    jso = parse('{"field1":{"field2":5}, "field3":[0,1,2,3,4,5,6,7,8,9]}');
   }
 
 }
