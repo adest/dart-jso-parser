@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="import" href="package:jsoparser/components/view-input.html">
+  <link rel="import" href="package:jsoparser/components/view-search.html">
+</head>
+<body>
+<element name="jso-app" extends="div" apply-author-styles="true">
+<template>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="#">{{appModel.title}}</a>
+      </div>
+    </div>
+  </nav>
+
+  <div view class="container"></div>
+  <!-- <x-view-input class="container"></x-view-input>
+  <x-view-search class="container"></x-view-search>-->
+
+  <footer class="navbar navbar-inverse navbar-fixed-bottom container">
+    <hr style="height: 2px;">
+    <p>&copy; Adrien Estran 2013</p>
+    <p>app: v0.1</p>
+  </footer>
+</template>
+<script type="application/dart" src="app.dart"></script>
+</element>
+</body>
+</html>

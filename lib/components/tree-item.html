@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+<element name="x-tree-item" constructor="TreeItem" extends="li">
+<style>
+  li,
+  li {
+    list-style-type: none;
+  }
+  li.opened > .title:before {
+    content: '+ ';
+  }
+  li.closed > .title:before {
+    content: '- ';
+  }
+  li > .title.is-leaf:before {
+    content: '';
+  }
+  li.closed > ul {
+    display: none;
+  }
+</style>
+<template>
+  <span
+          class="title  {{_isLeafStyle}}"
+          on-click="_handleTitleClick($event)">
+    {{title}}{{_separator}}
+  </span>
+  <template if="jsoCntl.matcheSearchFilter(title, value)">
+    <span class="label label-success">Found</span>
+  </template>
+</template>
+<script type="application/dart" src="tree-item.dart"></script>
+</element>
+</body>
+</html>

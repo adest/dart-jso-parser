@@ -1,0 +1,7 @@
+name: jsoparser
+description: A simple local jso parser
+dependencies:
+  browser: any
+  route: any
+  web_ui: any
+  widget: any
