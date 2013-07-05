@@ -7,18 +7,7 @@
 .hidden {
   visibility: hidden;
 }
-section.content form > textarea {
-  width: 100%;
-  min-height: 300px;
-}
-
-/* ==================================================== 
-   Component x-view-search stylesheet 
-   ==================================================== */
-.hidden {
-  visibility: hidden;
-}
-section.content form > textarea {
+section.content > textarea {
   width: 100%;
   min-height: 300px;
 }
