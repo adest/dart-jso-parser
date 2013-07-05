@@ -16987,7 +16987,7 @@ Isolate.$lazy($, "__html2", "JsoApp___html2", "get$JsoApp___html2", function() {
 });
 Isolate.$lazy($, "__shadowTemplate", "JsoApp___shadowTemplate", "get$JsoApp___shadowTemplate", function() {
   var fragment = document.createDocumentFragment();
-  $.set$innerHtml$x(fragment, "  <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n    <div class=\"navbar-inner\">\n      <div class=\"container\">\n        <a class=\"brand\" href=\"#\"></a>\n      </div>\n    </div>\n  </nav>\n\n  <div class=\"container\">\n    <template></template>\n    <template></template>\n  </div>\n  <!-- <x-view-input class=\"container\"></x-view-input>\n  <x-view-search class=\"container\"></x-view-search>-->\n\n  <footer class=\"navbar navbar-inverse navbar-fixed-bottom container\">\n    <hr style=\"height: 2px;\">\n    <p>\u00a9 Adrien Estran 2013</p>\n    <p>app: v0.1</p>\n  </footer>\n");
+  $.set$innerHtml$x(fragment, "  <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n    <div class=\"navbar-inner\">\n      <div class=\"container\">\n        <a class=\"brand\" href=\"#\"></a>\n      </div>\n    </div>\n  </nav>\n\n  <div class=\"container\">\n    <template></template>\n    <template></template>\n  </div>\n  <!-- <x-view-input class=\"container\"></x-view-input>\n  <x-view-search class=\"container\"></x-view-search>-->\n\n  <footer class=\"navbar navbar-inverse navbar-fixed-bottom container\">\n    <hr style=\"height: 2px;\">\n    <p>Adrien E - 2013</p>\n    <p>app: v0.1</p>\n  </footer>\n");
   return fragment;
 });
 Isolate.$lazy($, "jsoModel", "jsoModel", "get$jsoModel", function() {
