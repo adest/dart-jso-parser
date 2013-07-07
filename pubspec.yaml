@@ -1,6 +1,8 @@
 name: jsoparser
 description: A simple local jso parser
 dependencies:
+  logging_handlers: any
   browser: any
   web_ui: any
   widget: any
+  route: any
