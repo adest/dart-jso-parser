@@ -1,3 +1,5 @@
+library build;
+
 import 'dart:io';
 import 'package:web_ui/component_build.dart';
 
