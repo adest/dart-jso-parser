@@ -3,11 +3,61 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="import" href="package:jsoparser/components/tree-item.html">
 </head>
 <body>
-<element name="x-tree" constructor="Tree" extends="ul">
+<element name="x-tree" constructor="Tree" extends="ul" apply-author-styles="">
+<style>
+  li.parent:before {
+    content: '-';
+  }
+  li.parent.open:before {
+    content: '+';
+  }
+  li.parent > ul {
+    display: none;
+  }
+  li.parent.open > ul {
+    display: block;
+  }
+</style>
 <template>
+  <template if="jso is Map">
+    <template iterate="key in jso.keys">
+
+      <template if="jso[key] is List || jso[key] is Map">
+        <li class="parent open">
+          <span on-click="handleToggle($event)">{{key}}:</span>
+          <template if="jsoCntl.matcheSearchFilter(key, jso[key])">
+            <span class="label label-success">Found</span>
+          </template>
+          <ul is="x-tree" jso="{{jso[key]}}"></ul>
+        </li>
+      </template>
+
+      <template if="jso[key] is String || jso[key] is num">
+        <li>
+          {{key}}: {{jso[key]}}
+          <template if="jsoCntl.matcheSearchFilter(key, jso[key])">
+            <span class="label label-success">Found</span>
+          </template>
+        </li>
+      </template>
+
+    </template>
+  </template>
+
+  <template if="jso is List">
+    <template iterate="value in jso">
+      <template if="value is String || value is num">
+        <li>
+          {{value}}
+          <template if="jsoCntl.matcheSearchFilter('${value}', null)">
+            <span class="label label-success">Found</span>
+          </template>
+        </li>
+      </template>
+    </template>
+  </template>
 </template>
 <script type="application/dart" src="tree.dart"></script>
 </element>
