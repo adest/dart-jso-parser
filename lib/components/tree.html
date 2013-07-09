@@ -5,8 +5,11 @@
   <meta charset="utf-8">
 </head>
 <body>
-<element name="x-tree" constructor="Tree" extends="ul" apply-author-styles="">
+<element name="x-tree" constructor="Tree" extends="ul" apply-author-styles="true">
 <style>
+  li {
+    list-style-type: none;
+  }
   li.parent:before {
     content: '-';
   }

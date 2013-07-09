@@ -8,9 +8,9 @@ class Tree extends WebComponent {
 
   handleToggle(MouseEvent e) {
     assert(e != null);
-    assert(e.fromElement != null);
-    assert(e.fromElement is SpanElement);
-    assert(e.fromElement.parent is LIElement);
-    e.fromElement.parent.classes.toggle("open");
+    assert(e.toElement != null);
+    assert(e.toElement is SpanElement);
+    assert(e.toElement.parent is LIElement);
+    e.toElement.parent.classes.toggle("open");
   }
 }
