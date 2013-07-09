@@ -12,6 +12,8 @@ class ViewEnum {
 class AppModel {
   String title = "JsoParser";
   @observable ViewEnum currentView = ViewEnum.INPUT;
+  @observable String get animationClass
+          => currentView == ViewEnum.SEARCH? 'r2l': 'l2r';
 }
 
 class JsoModel {
