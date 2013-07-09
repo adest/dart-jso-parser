@@ -16,8 +16,30 @@ body {
   left: 0;
   right: 0;
 }
+.view.r2l {
+  -webkit-animation: r2l 3s;
+}
+.view.l2r {
+  -webkit-animation: l2r 3s;
+}
 footer.navbar-fixed-bottom {
   height: 105px;
+}
+@-webkit-keyframes r2l {
+  from {
+  left: 100%;
+  }
+  to {
+  left: 0;
+  }
+}
+@-webkit-keyframes l2r {
+  from {
+  right: 100%;
+  }
+  to {
+  right: 0;
+  }
 }
 
 /* ==================================================== 
