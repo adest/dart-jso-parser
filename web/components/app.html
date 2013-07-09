@@ -8,25 +8,42 @@
 </head>
 <body>
 <element name="jso-app" extends="div" apply-author-styles="true">
+<style>
+  body {
+    overflow: hidden;
+  }
+  .view {
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: fixed;
+    top: 60px;
+    bottom: 105px;
+    left: 0;
+    right: 0;
+  }
+  footer.navbar-fixed-bottom {
+    height: 105px;
+  }
+</style>
 <template>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
-        <a class="brand" href="#">{{appModel.title}}</a>
+        <a class="brand" href="#home">{{appModel.title}}</a>
       </div>
     </div>
   </nav>
 
-  <div class="container">
-    <template if="appModel.currentView == ViewEnum.INPUT">
-      <x-view-input></x-view-input>
-    </template>
-    <template if="appModel.currentView == ViewEnum.SEARCH">
-      <x-view-search></x-view-search>
-    </template>
+  <div class="view">
+    <div class="container">
+      <template if="appModel.currentView == ViewEnum.INPUT">
+        <x-view-input></x-view-input>
+      </template>
+      <template if="appModel.currentView == ViewEnum.SEARCH">
+        <x-view-search></x-view-search>
+      </template>
+    </div>
   </div>
-  <!-- <x-view-input class="container"></x-view-input>
-  <x-view-search class="container"></x-view-search>-->
 
   <footer class="navbar navbar-inverse navbar-fixed-bottom container">
     <hr style="height: 2px;">
