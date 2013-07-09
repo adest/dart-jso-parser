@@ -16,6 +16,6 @@ class ViewSearch extends WebComponent {
   }
 
   handleBack() {
-    router.gotoUrl(home, [], "");
+    router.gotoUrl(home, [], homeTitle);
   }
 }

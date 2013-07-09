@@ -11,7 +11,7 @@ class JsoCntl {
   void parse(String jso) {
     jsoModel.jso = json.parse(jso);
     String hexString = toHexString(jsoModel.jso);
-    router.gotoUrl(search, [hexString], "");
+    router.gotoUrl(search, [hexString], searchTitle);
   }
 
   bool matcheSearchFilter(String title, var value) {
